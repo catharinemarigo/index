@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://catharinemarigo.com.br/sitemap.xml

@@ -1,0 +1,11 @@
+{
+  "name": "Catharine Marigo — Cirurgia e Nutrologia",
+  "short_name": "Catharine Marigo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F1E8",
+  "theme_color": "#393632",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

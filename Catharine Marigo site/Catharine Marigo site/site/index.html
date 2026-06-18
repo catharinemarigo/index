@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#393632" />
+  <title>Catharine Marigo | Cirurgia e Nutrologia</title>
+  <meta name="description" content="Catharine Marigo — Cirurgia geral e Nutrologia por telemedicina. Avaliação médica para queixas cirúrgicas comuns, cuidado nutricional clínico, saúde metabólica e acompanhamento personalizado, com atendimento on-line." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://catharinemarigo.com.br/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Catharine Marigo | Cirurgia e Nutrologia" />
+  <meta property="og:description" content="Atendimento médico em cirurgia geral e nutrologia por telemedicina, com comunicação clara, avaliação individualizada e foco em segurança clínica." />
+  <meta property="og:image" content="assets/doctor.jpg" />
+  <meta property="og:url" content="https://catharinemarigo.com.br/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preload" as="image" href="assets/doctor.webp" imagesrcset="assets/doctor.webp" />
+
+  <style>
+    :root {
+      --sage: #6C7463;
+      --stone: #9D9989;
+      --teal: #1D545D;
+      --rose: #894054;
+      --ink: #393632;
+      --paper: #F5F1E8;
+      --cream: #DDD4B7;
+      --white: #FFFFFF;
+      --muted: #67635B;
+      --line: rgba(57, 54, 50, 0.14);
+      --shadow: 0 24px 70px rgba(57, 54, 50, 0.15);
+      --shadow-soft: 0 14px 40px rgba(57, 54, 50, 0.10);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --max: 1160px;
+      --cta: #894054;
+      --cta-ink: #fff;
+      --bg: var(--paper);
+      --surface: rgba(255, 255, 255, 0.72);
+      --surface-strong: #fffaf1;
+      --text: var(--ink);
+    }
+
+    [data-theme="dark"] {
+      --bg: #23211f;
+      --surface: rgba(57, 54, 50, 0.72);
+      --surface-strong: #2f2c29;
+      --text: #f4efe5;
+      --muted: #d3cbbd;
+      --line: rgba(245, 241, 232, 0.16);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+      --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.22);
+      --cta: #DDD4B7;
+      --cta-ink: #393632;
+    }
+
+    @property --hero-angle {
+      syntax: '<angle>';
+      inherits: true;
+      initial-value: 135deg;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background:
+        radial-gradient(circle at 7% 14%, rgba(108,116,99,.24), transparent 29rem),
+        radial-gradient(circle at 88% 9%, rgba(137,64,84,.14), transparent 27rem),
+        linear-gradient(180deg, var(--bg), color-mix(in srgb, var(--bg), #fff 18%));
+      color: var(--text);
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, input, select, textarea { font: inherit; }
+    ::selection { background: var(--teal); color: white; }
+
+    .skip-link {
+      position: fixed; left: 1rem; top: -4rem; z-index: 1000;
+      background: var(--ink); color: #fff; padding: .75rem 1rem; border-radius: 999px;
+      transition: top .2s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .scroll-progress {
+      position: fixed; inset: 0 auto auto 0; height: 3px; width: var(--scroll, 0%);
+      background: linear-gradient(90deg, var(--teal), var(--rose), var(--sage));
+      z-index: 999;
+    }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 80;
+      backdrop-filter: blur(18px);
+      background: color-mix(in srgb, var(--bg), transparent 16%);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      width: min(var(--max), calc(100% - 32px)); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 76px; gap: 1rem;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: .8rem; min-width: 0;
+    }
+    .brand-mark {
+      width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+      box-shadow: 0 8px 24px rgba(57,54,50,.12);
+      border: 1px solid rgba(255,255,255,.6);
+      background: var(--cream);
+    }
+    .brand-text { display: grid; line-height: 1.05; }
+    .brand-text strong { font-family: var(--serif); font-size: clamp(1.05rem, 1.6vw, 1.35rem); letter-spacing: .045em; text-transform: uppercase; }
+    .brand-text span { color: var(--muted); letter-spacing: .18em; font-size: .72rem; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: .35rem; }
+    .nav-links a, .theme-toggle {
+      border: 0; background: transparent; color: var(--text);
+      padding: .68rem .86rem; border-radius: 999px; cursor: pointer;
+      transition: background .2s ease, transform .2s ease;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .theme-toggle:hover { background: color-mix(in srgb, var(--stone), transparent 78%); transform: translateY(-1px); }
+    .nav-cta { display: inline-flex; align-items: center; gap: .45rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      border: 1px solid transparent; border-radius: 999px; padding: .9rem 1.18rem;
+      min-height: 48px; font-weight: 760; letter-spacing: .01em;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+    .btn-primary { background: var(--cta); color: var(--cta-ink); }
+    .btn-outline { border-color: var(--line); background: color-mix(in srgb, var(--surface-strong), transparent 20%); color: var(--text); }
+    .btn-ghost { background: color-mix(in srgb, var(--teal), transparent 88%); color: var(--text); border-color: color-mix(in srgb, var(--teal), transparent 74%); }
+
+    .section { padding: clamp(4.5rem, 8vw, 7.8rem) 0; content-visibility: auto; contain-intrinsic-size: 900px; }
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .55rem;
+      color: var(--teal); font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: .76rem;
+    }
+    .eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; opacity: .65; }
+    h1, h2, h3 { margin: 0; line-height: 1.02; }
+    h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: .025em; }
+    h1 { font-size: clamp(3.3rem, 8vw, 7.8rem); text-transform: uppercase; }
+    h2 { font-size: clamp(2.55rem, 5.4vw, 5.1rem); }
+    h3 { font-size: 1.16rem; letter-spacing: -.01em; }
+    p { margin: 0; color: var(--muted); }
+
+    .hero {
+      position: relative; overflow: clip; min-height: calc(100svh - 76px);
+      display: grid; place-items: center;
+      background:
+        linear-gradient(var(--hero-angle), rgba(29,84,93,.16), transparent 45%),
+        linear-gradient(180deg, color-mix(in srgb, var(--paper), #fff 8%), var(--bg));
+      isolation: isolate;
+      animation: hero-shift 18s ease-in-out infinite alternate;
+    }
+    @keyframes hero-shift { from { --hero-angle: 124deg; } to { --hero-angle: 158deg; } }
+    .hero::before {
+      content: ""; position: absolute; inset: 8% -10% auto auto; width: 46rem; height: 46rem; border-radius: 50%;
+      background: radial-gradient(circle, rgba(137,64,84,.18), transparent 62%); z-index: -1;
+      filter: blur(4px);
+    }
+    .hero-grid {
+      width: min(1240px, calc(100% - 32px)); margin: 0 auto;
+      display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .78fr); gap: clamp(2rem, 6vw, 5rem);
+      align-items: center; padding: clamp(3rem, 6vw, 5.8rem) 0;
+    }
+    .hero-copy { display: grid; gap: 1.35rem; }
+    .hero-subtitle { font-size: clamp(1.05rem, 2vw, 1.35rem); max-width: 59ch; }
+    .hero-kicker { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: .4rem; }
+    .chip {
+      display: inline-flex; align-items: center; gap: .45rem; padding: .54rem .78rem; border-radius: 999px;
+      background: color-mix(in srgb, var(--surface-strong), transparent 12%); border: 1px solid var(--line);
+      color: var(--text); font-weight: 700; font-size: .88rem;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: .4rem; }
+    .hero-media { position: relative; min-height: 560px; }
+    .doctor-card {
+      position: relative; height: min(68svh, 690px); min-height: 520px; border-radius: 44px; overflow: hidden;
+      box-shadow: var(--shadow); background: var(--cream); border: 1px solid rgba(255,255,255,.5);
+    }
+    .doctor-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(.96) contrast(1.02); }
+    .doctor-card::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 42%, rgba(57,54,50,.62));
+      pointer-events: none;
+    }
+    .doctor-caption {
+      position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 1;
+      padding: 1rem; border-radius: 28px; backdrop-filter: blur(18px);
+      background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.18); color: white;
+    }
+    .doctor-caption strong { font-family: var(--serif); font-size: 1.45rem; font-weight: 400; letter-spacing: .04em; }
+    .doctor-caption p { color: rgba(255,255,255,.78); margin-top: .25rem; }
+    .float-card {
+      position: absolute; left: -2rem; top: 12%; width: min(330px, 70%); padding: 1.1rem;
+      border-radius: 30px; background: color-mix(in srgb, var(--surface-strong), transparent 4%);
+      box-shadow: var(--shadow-soft); border: 1px solid var(--line); backdrop-filter: blur(16px);
+    }
+    .float-card img { width: 70px; height: 70px; object-fit: cover; border-radius: 22px; background: var(--cream); margin-bottom: .8rem; }
+    .float-card p { font-size: .95rem; }
+    .stat-card {
+      position: absolute; right: -1rem; bottom: 12%; width: min(310px, 68%); padding: 1rem;
+      border-radius: 30px; background: var(--teal); color: #fff; box-shadow: var(--shadow-soft);
+    }
+    .stat-card span { display: block; color: rgba(255,255,255,.72); font-size: .82rem; text-transform: uppercase; letter-spacing: .14em; }
+    .stat-card strong { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 400; }
+    .stat-card p { color: rgba(255,255,255,.78); }
+
+    .section-head { display: grid; grid-template-columns: minmax(0, .92fr) minmax(260px, .46fr); gap: 2rem; align-items: end; margin-bottom: 2rem; }
+    .section-head p { max-width: 60ch; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .service-card, .problem-card, .feature-card, .faq-card, .booking-card {
+      border: 1px solid var(--line); background: var(--surface); backdrop-filter: blur(16px); box-shadow: var(--shadow-soft);
+      border-radius: var(--radius); overflow: hidden; position: relative;
+    }
+    .service-card { padding: 1.35rem; min-height: 320px; display: grid; align-content: space-between; gap: 1.25rem; }
+    .service-card::before {
+      content: ""; position: absolute; inset: 0 0 auto 0; height: 7px;
+      background: linear-gradient(90deg, var(--sage), var(--teal), var(--rose));
+    }
+    .service-icon {
+      width: 52px; height: 52px; border-radius: 18px; display: grid; place-items: center;
+      background: color-mix(in srgb, var(--teal), transparent 84%); color: var(--teal); font-weight: 900;
+    }
+    .service-card p { margin-top: .7rem; }
+    .service-card .btn { width: fit-content; }
+
+    .cta-band {
+      border-radius: 36px; overflow: hidden; min-height: 320px; display: grid; grid-template-columns: .95fr 1.05fr;
+      background: var(--ink); color: #fff; box-shadow: var(--shadow); margin-top: 1.1rem;
+    }
+    .cta-band-media { min-height: 320px; position: relative; }
+    .cta-band-media img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9); }
+    .cta-band-content { padding: clamp(1.4rem, 4vw, 3rem); display: grid; align-content: center; gap: 1rem; }
+    .cta-band-content h2 { font-size: clamp(2rem, 4vw, 3.8rem); }
+    .cta-band-content p { color: rgba(255,255,255,.74); max-width: 58ch; }
+
+    .problems-toolbar {
+      display: flex; flex-wrap: wrap; gap: .7rem; justify-content: space-between; align-items: center; margin: 1.5rem 0 1rem;
+    }
+    .filters { display: flex; flex-wrap: wrap; gap: .55rem; }
+    .filter-btn {
+      border: 1px solid var(--line); border-radius: 999px; padding: .65rem .9rem; background: var(--surface-strong); color: var(--text); cursor: pointer;
+    }
+    .filter-btn[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .search {
+      min-width: min(100%, 330px); border: 1px solid var(--line); border-radius: 999px; padding: .8rem 1rem;
+      background: var(--surface-strong); color: var(--text); outline: none;
+    }
+    .problems-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .problem-card { padding: 1.15rem; min-height: 265px; display: grid; gap: .85rem; align-content: start; }
+    .problem-card .tag { width: fit-content; padding: .34rem .6rem; border-radius: 999px; font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .tag-surgery { background: color-mix(in srgb, var(--teal), transparent 84%); color: var(--teal); }
+    .tag-nutro { background: color-mix(in srgb, var(--rose), transparent 84%); color: var(--rose); }
+    .problem-card .btn { margin-top: auto; width: fit-content; padding: .72rem .92rem; min-height: 42px; }
+
+    .features {
+      background: linear-gradient(180deg, color-mix(in srgb, var(--cream), transparent 55%), transparent);
+    }
+    .feature-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1.1rem; align-items: stretch; }
+    .feature-image {
+      border-radius: 36px; overflow: hidden; min-height: 560px; box-shadow: var(--shadow); border: 1px solid var(--line);
+    }
+    .feature-image img { width: 100%; height: 100%; object-fit: cover; }
+    .feature-list { display: grid; gap: 1rem; }
+    .feature-card { padding: 1.25rem; display: grid; gap: .7rem; }
+    .feature-card h3 { display: flex; align-items: center; gap: .55rem; }
+    .feature-card h3 span { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--sage); color: #fff; font-size: .84rem; }
+
+    .booking-shell { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1rem; align-items: stretch; }
+    .booking-card { padding: clamp(1.25rem, 3vw, 2rem); }
+    .booking-intro { background: var(--teal); color: #fff; display: grid; align-content: space-between; min-height: 540px; }
+    .booking-intro p { color: rgba(255,255,255,.76); }
+    .booking-intro .mini-logo { width: 118px; border-radius: 28px; background: var(--cream); }
+    .booking-form { display: grid; gap: .95rem; }
+    .field { display: grid; gap: .38rem; }
+    .field label { font-weight: 780; font-size: .9rem; }
+    .field input, .field select, .field textarea {
+      width: 100%; border: 1px solid var(--line); border-radius: 18px; padding: .9rem 1rem;
+      background: color-mix(in srgb, var(--surface-strong), transparent 5%); color: var(--text); outline: none;
+    }
+    .field textarea { min-height: 114px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 4px color-mix(in srgb, var(--teal), transparent 84%); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .form-note { font-size: .84rem; color: var(--muted); }
+
+    .faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    details.faq-card { padding: 1rem 1.1rem; }
+    details summary { cursor: pointer; font-weight: 850; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: "+"; color: var(--rose); font-size: 1.3rem; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { margin-top: .75rem; }
+
+    .site-footer {
+      background: var(--ink); color: #fff; padding: 3.2rem 0 2rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: start; }
+    .site-footer p { color: rgba(255,255,255,.72); max-width: 70ch; }
+    .footer-title { font-family: var(--serif); font-size: 2.1rem; font-weight: 400; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .45rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: .65rem; justify-content: end; }
+    .legal { border-top: 1px solid rgba(255,255,255,.14); padding-top: 1.2rem; margin-top: 2rem; font-size: .85rem; }
+
+    .floating-cta {
+      position: fixed; right: max(1rem, env(safe-area-inset-right)); bottom: max(1rem, env(safe-area-inset-bottom));
+      z-index: 70; box-shadow: 0 18px 40px rgba(57,54,50,.24);
+    }
+
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1020px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero-grid, .feature-grid, .booking-shell, .cta-band { grid-template-columns: 1fr; }
+      .hero-media { min-height: 0; }
+      .doctor-card { height: 640px; }
+      .float-card { left: 1rem; top: 1rem; }
+      .stat-card { right: 1rem; bottom: 1rem; }
+      .services-grid, .problems-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-head { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      .nav { min-height: 68px; }
+      .brand-text span { display: none; }
+      .brand-mark { width: 42px; height: 42px; }
+      .nav-cta { display: none !important; }
+      .theme-toggle { padding-inline: .72rem; }
+      h1 { font-size: clamp(2.65rem, 15vw, 4.5rem); }
+      .hero-grid { padding-top: 2.2rem; }
+      .doctor-card { min-height: 500px; height: 560px; border-radius: 32px; }
+      .float-card, .stat-card { position: relative; inset: auto; width: 100%; margin-top: 1rem; }
+      .services-grid, .problems-grid, .faq-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .feature-image { min-height: 340px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-links { justify-content: start; }
+      .floating-cta { left: 1rem; right: 1rem; width: auto; }
+      .floating-cta .btn { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dra. Catharine Marigo",
+    "url": "https://catharinemarigo.com.br/",
+    "image": "https://catharinemarigo.com.br/assets/doctor.jpg",
+    "email": "contato@catharinemarigo.com.br",
+    "medicalSpecialty": ["GeneralSurgery", "Nutrition"],
+    "areaServed": "Brasil",
+    "availableLanguage": "pt-BR",
+    "identifier": { "@type": "PropertyValue", "name": "CRM", "value": "237820-SP" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Cotia", "addressRegion": "SP", "addressCountry": "BR" },
+    "description": "Atendimento médico em cirurgia geral e nutrologia por telemedicina, com avaliação individualizada e comunicação clara.",
+    "availableService": [
+      { "@type": "MedicalProcedure", "name": "Avaliação em cirurgia geral" },
+      { "@type": "MedicalTherapy", "name": "Avaliação em nutrologia" },
+      { "@type": "MedicalProcedure", "name": "Teleconsulta (telemedicina)" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Página inicial Catharine Marigo">
+        <img class="brand-mark" src="assets/logo-seal.webp" alt="Logomarca Catharine Marigo" width="96" height="96" />
+        <span class="brand-text">
+          <strong>Catharine Marigo</strong>
+          <span>Cirurgia e Nutrologia</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#especialidades">Atendimento</a>
+        <a href="#problemas">Problemas comuns</a>
+        <a href="#sobre">A médica</a>
+        <a href="#agendamento">Contato</a>
+        <button class="theme-toggle" type="button" aria-label="Alternar tema" data-theme-toggle>◐</button>
+        <a class="btn btn-primary nav-cta" href="#agendamento">Marque sua consulta</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-label="Apresentação">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Atendimento médico</span>
+          <h1>Catharine<br />Marigo</h1>
+          <p class="hero-subtitle">Cirurgia e Nutrologia para avaliação clínica, orientação objetiva e acompanhamento individualizado — com atendimento por telemedicina, foco em segurança, clareza e decisões proporcionais ao caso.</p>
+          <div class="hero-kicker" aria-label="Principais áreas">
+            <span class="chip">Cirurgia geral</span>
+            <span class="chip">Nutrologia clínica</span>
+            <span class="chip">Telemedicina</span>
+            <span class="chip">Avaliação personalizada</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+            <a class="btn btn-outline" href="#problemas">Ver problemas comuns</a>
+          </div>
+        </div>
+
+        <div class="hero-media reveal" aria-label="Foto da médica">
+          <figure class="doctor-card">
+            <picture>
+              <source srcset="assets/doctor.webp" type="image/webp" />
+              <img src="assets/doctor.jpg" alt="Dra. Catharine Marigo em jaleco" width="900" height="1045" fetchpriority="high" />
+            </picture>
+            <figcaption class="doctor-caption">
+              <strong>Consulta com escuta clínica.</strong>
+              <p>Orientação clara para sintomas digestivos, queixas cirúrgicas e objetivos de saúde metabólica.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="wrap feature-grid" style="align-items:center">
+        <div class="feature-list reveal" style="order:1">
+          <span class="eyebrow">A médica</span>
+          <h2>Dra. Catharine Marigo</h2>
+          <p>Médica dedicada à cirurgia geral e à nutrologia, com atendimento por telemedicina para avaliação clínica, orientação objetiva e acompanhamento individualizado — do primeiro contato ao plano de cuidado.</p>
+          <div class="hero-kicker" style="margin-top:.2rem">
+            <span class="chip">CRM 237820 · SP</span>
+            <span class="chip">Cotia · SP</span>
+            <span class="chip">Atendimento por telemedicina</span>
+          </div>
+          <article class="feature-card" style="margin-top:.5rem">
+            <h3><span>✓</span> Consulta on-line, onde você estiver</h3>
+            <p>Os atendimentos são realizados por telemedicina, em conformidade com as normas do Conselho Federal de Medicina (CFM), preservando o sigilo médico e a segurança das suas informações.</p>
+          </article>
+          <a class="btn btn-primary" href="#agendamento">Falar com a equipe</a>
+        </div>
+        <div class="feature-image reveal" style="order:2; min-height:600px">
+          <img src="assets/portrait.jpg" alt="Dra. Catharine Marigo sorrindo no consultório" width="1920" height="2879" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="especialidades">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Atendimento</span>
+            <h2>Cirurgia e nutrologia em uma jornada mais clara.</h2>
+          </div>
+          <p>O site foi pensado para reduzir dúvidas iniciais: o paciente identifica sua queixa, entende quando procurar avaliação e encontra caminhos rápidos para agendar consulta.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon" aria-hidden="true">CG</div>
+              <h3>Cirurgia geral</h3>
+              <p>Avaliação de hérnias, vesícula, dor abdominal, nódulos, cistos, pequenas lesões e necessidade de investigação cirúrgica.</p>
+            </div>
+            <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon" aria-hidden="true">NT</div>
+              <h3>Nutrologia</h3>
+              <p>Cuidado médico para saúde metabólica, composição corporal, deficiências nutricionais, energia, performance e prevenção clínica.</p>
+            </div>
+            <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="service-card reveal">
+            <div>
+              <div class="service-icon" aria-hidden="true">✓</div>
+              <h3>Avaliação integrada</h3>
+              <p>Quando sintomas digestivos, rotina alimentar, exames e objetivos de saúde precisam ser analisados de forma conjunta e responsável.</p>
+            </div>
+            <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+          </article>
+        </div>
+
+        <div class="cta-band reveal" aria-label="Chamada intermediária para consulta">
+          <div class="cta-band-media">
+            <picture>
+              <source srcset="assets/desk.webp" type="image/webp" />
+              <img src="assets/desk.jpg" alt="Mesa de trabalho com café, notebook e caderno" loading="lazy" width="1600" height="756" />
+            </picture>
+          </div>
+          <div class="cta-band-content">
+            <span class="eyebrow" style="color:#DDD4B7">Orientação inicial</span>
+            <h2>Não sabe se sua queixa é cirúrgica ou clínica?</h2>
+            <p>Descreva seu sintoma no agendamento. A consulta organiza a prioridade, define hipóteses, avalia exames e indica o próximo passo com segurança.</p>
+            <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problemas">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Problemas comuns</span>
+            <h2>Linguagem simples para reconhecer quando procurar avaliação.</h2>
+          </div>
+          <p>As descrições abaixo não substituem consulta. Elas servem para traduzir queixas frequentes de cirurgia geral e nutrologia em termos mais próximos da rotina do paciente.</p>
+        </div>
+
+        <div class="problems-toolbar reveal" aria-label="Filtros de problemas comuns">
+          <div class="filters" role="group" aria-label="Filtrar cartões">
+            <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter-btn" type="button" data-filter="surgery" aria-pressed="false">Cirurgia geral</button>
+            <button class="filter-btn" type="button" data-filter="nutro" aria-pressed="false">Nutrologia</button>
+          </div>
+          <input class="search" type="search" placeholder="Buscar: hérnia, vesícula, cansaço..." aria-label="Buscar problemas" data-search />
+        </div>
+
+        <div class="problems-grid" data-problem-grid>
+          <article class="problem-card reveal" data-category="surgery" data-keywords="hernia umbigo virilha caroço esforço dor cirurgia">
+            <span class="tag tag-surgery">Cirurgia geral</span>
+            <h3>Hérnia no umbigo ou na virilha</h3>
+            <p>Caroço que aparece ou aumenta ao tossir, levantar peso ou fazer esforço. Pode causar dor, incômodo local e limitação nas atividades.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="surgery" data-keywords="vesicula pedra bile dor lado direito enjoo gordura">
+            <span class="tag tag-surgery">Cirurgia geral</span>
+            <h3>Pedra na vesícula</h3>
+            <p>Dor do lado direito da barriga, enjoo, mal-estar após alimentos gordurosos ou crises repetidas. A avaliação define risco e necessidade de cirurgia.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="surgery" data-keywords="dor abdominal apendicite diverticulite inflamação urgencia febre vomito">
+            <span class="tag tag-surgery">Cirurgia geral</span>
+            <h3>Dor abdominal que preocupa</h3>
+            <p>Dor forte, progressiva, com febre, vômitos ou piora do estado geral exige avaliação rápida para afastar inflamações e urgências cirúrgicas.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="surgery" data-keywords="cisto lipoma caroço abscesso pele secreção inflamação pequenos procedimentos">
+            <span class="tag tag-surgery">Cirurgia geral</span>
+            <h3>Cistos, lipomas e nódulos</h3>
+            <p>Carocinhos na pele ou abaixo dela, com crescimento, dor, inflamação ou secreção. A consulta orienta exame, observação ou retirada.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="surgery" data-keywords="refluxo queimação estômago empachamento hernia hiato gastro digestivo">
+            <span class="tag tag-surgery">Cirurgia geral</span>
+            <h3>Refluxo e desconforto digestivo</h3>
+            <p>Queimação, azia, sensação de comida voltando, empachamento ou dor após refeições. Nem sempre é caso cirúrgico, mas pode precisar investigação.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="surgery" data-keywords="pos operatorio cirurgia ferida curativo acompanhamento">
+            <span class="tag tag-surgery">Cirurgia geral</span>
+            <h3>Acompanhamento pós-operatório</h3>
+            <p>Dúvidas sobre ferida, curativo, dor, retorno às atividades e sinais de alerta depois de uma cirurgia merecem orientação objetiva.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+
+          <article class="problem-card reveal" data-category="nutro" data-keywords="peso metabolismo emagrecimento segurança exames rotina alimentar">
+            <span class="tag tag-nutro">Nutrologia</span>
+            <h3>Controle de peso com segurança</h3>
+            <p>Avaliação médica de metabolismo, rotina, exames, medicações e histórico clínico, sem promessas rápidas e sem soluções genéricas.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="nutro" data-keywords="cansaço energia fraqueza sono disposição anemia vitaminas">
+            <span class="tag tag-nutro">Nutrologia</span>
+            <h3>Cansaço e baixa energia</h3>
+            <p>Fadiga persistente, sono ruim, queda de rendimento ou fraqueza podem ter relação com alimentação, exames, sono, estresse e condições clínicas.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="nutro" data-keywords="vitaminas anemia ferro b12 vitamina d minerais deficiência exames">
+            <span class="tag tag-nutro">Nutrologia</span>
+            <h3>Vitaminas, anemia e deficiências</h3>
+            <p>Queda de cabelo, unhas frágeis, tontura, cansaço e exames alterados podem exigir investigação e reposição adequada quando indicada.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="nutro" data-keywords="atividade fisica corrida performance recuperação massa muscular lesão">
+            <span class="tag tag-nutro">Nutrologia</span>
+            <h3>Atividade física e performance</h3>
+            <p>Para quem treina ou corre, a nutrologia ajuda a alinhar energia, recuperação, exames e prevenção de queda de rendimento.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="nutro" data-keywords="menopausa mulher hormônios sono calor composição corporal saúde óssea">
+            <span class="tag tag-nutro">Nutrologia</span>
+            <h3>Menopausa e mudanças corporais</h3>
+            <p>Alterações de sono, disposição, fome, força e medidas podem ser avaliadas junto com exames, rotina alimentar e saúde óssea.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+          <article class="problem-card reveal" data-category="nutro" data-keywords="intestino gases estufamento alimentação desconforto gastrointestinal">
+            <span class="tag tag-nutro">Nutrologia</span>
+            <h3>Estufamento, gases e intestino</h3>
+            <p>Sensação de barriga inchada, alteração intestinal e desconforto recorrente podem exigir revisão alimentar, exames e avaliação clínica.</p>
+            <a class="btn btn-ghost" href="#agendamento">Marque sua consulta</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="metodo">
+      <div class="wrap feature-grid">
+        <div class="feature-image reveal">
+          <picture>
+            <source srcset="assets/runner.webp" type="image/webp" />
+            <img src="assets/runner.jpg" alt="Pessoa correndo ao ar livre" loading="lazy" width="1400" height="933" />
+          </picture>
+        </div>
+        <div class="feature-list reveal">
+          <span class="eyebrow">Método de consulta</span>
+          <h2>Do sintoma ao plano possível.</h2>
+          <article class="feature-card">
+            <h3><span>1</span> Escuta da queixa principal</h3>
+            <p>O atendimento começa pelo problema real do paciente: dor, desconforto, alteração de exames, objetivo de saúde ou dúvida sobre cirurgia.</p>
+          </article>
+          <article class="feature-card">
+            <h3><span>2</span> Revisão clínica e exames</h3>
+            <p>Histórico, medicamentos, rotina, exames prévios e sinais de alerta são organizados antes da decisão terapêutica.</p>
+          </article>
+          <article class="feature-card">
+            <h3><span>3</span> Conduta proporcional</h3>
+            <p>O plano pode envolver acompanhamento, exames, encaminhamento, preparo para procedimento ou tratamento clínico, sempre conforme o caso.</p>
+          </article>
+          <article class="feature-card">
+            <h3><span>4</span> Agenda facilitada</h3>
+            <p>Os botões de consulta distribuídos pela página conduzem o paciente diretamente ao contato de agendamento.</p>
+          </article>
+          <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="agendamento">
+      <div class="wrap booking-shell">
+        <aside class="booking-card booking-intro reveal">
+          <img class="mini-logo" src="assets/logo-cm.webp" alt="Símbolo da logomarca Catharine Marigo" width="160" height="133" loading="lazy" />
+          <div>
+            <span class="eyebrow" style="color:#DDD4B7">Contato e agendamento</span>
+            <h2>Marque sua consulta</h2>
+            <p>Atendimento por telemedicina. Preencha o formulário e nossa equipe responderá por e-mail para confirmar o melhor horário. Você também pode escrever diretamente para <a href="mailto:contato@catharinemarigo.com.br" style="color:#fff;text-decoration:underline">contato@catharinemarigo.com.br</a>.</p>
+          </div>
+          <a class="btn btn-outline" href="mailto:contato@catharinemarigo.com.br" style="border-color:rgba(255,255,255,.45);color:#fff;background:transparent">Enviar e-mail</a>
+        </aside>
+
+        <div class="booking-card reveal">
+          <form class="booking-form" id="form" data-contact-form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="dee96ff8-a0ff-4b44-a6fd-15b36128cbd1" />
+            <input type="hidden" name="subject" value="Novo contato pelo site — Catharine Marigo" />
+            <input type="hidden" name="from_name" value="Site Catharine Marigo" />
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important" />
+            <div class="form-row">
+              <div class="field">
+                <label for="nome">Nome</label>
+                <input id="nome" name="name" autocomplete="name" placeholder="Seu nome" required />
+              </div>
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="telefone">Telefone (opcional)</label>
+                <input id="telefone" name="telefone" autocomplete="tel" placeholder="(00) 00000-0000" />
+              </div>
+              <div class="field">
+                <label for="area">Tipo de consulta</label>
+                <select id="area" name="tipo_de_consulta">
+                  <option value="Cirurgia geral">Cirurgia geral</option>
+                  <option value="Nutrologia">Nutrologia</option>
+                  <option value="Avaliação integrada">Avaliação integrada</option>
+                  <option value="Ainda não sei">Ainda não sei</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="periodo">Melhor período</label>
+              <select id="periodo" name="melhor_periodo">
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+                <option value="Flexível">Flexível</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="mensagem">Mensagem breve</label>
+              <textarea id="mensagem" name="message" placeholder="Ex.: tenho dor após comer gordura / quero avaliar exames e composição corporal / tenho suspeita de hérnia..." required></textarea>
+            </div>
+            <label style="display:flex; gap:.6rem; align-items:flex-start; font-size:.86rem; color:var(--muted); line-height:1.45; font-weight:500">
+              <input type="checkbox" name="consentimento_lgpd" value="Concordo com o tratamento dos meus dados (LGPD)" required style="margin-top:.18rem; width:18px; height:18px; flex:none; accent-color:var(--teal)" />
+              <span>Autorizo o contato e o tratamento dos meus dados pessoais para fins de agendamento e atendimento, conforme a <a href="#privacidade" style="color:var(--teal); text-decoration:underline">Política de Privacidade</a> e a Lei Geral de Proteção de Dados (LGPD).</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+            <p data-form-status role="status" aria-live="polite" style="font-weight:700; font-size:.92rem; min-height:1.2em; margin:0"></p>
+            <p class="form-note">Evite enviar dados sensíveis de saúde além do necessário. Em caso de dor intensa, febre, vômitos persistentes, desmaio, sangramento ou piora rápida, procure atendimento de urgência (192 / pronto-socorro).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="duvidas">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Dúvidas frequentes</span>
+            <h2>Respostas objetivas antes da consulta.</h2>
+          </div>
+          <p>Uma seção simples melhora conversão, reduz mensagens repetidas e ajuda o paciente a entender o momento correto de procurar atendimento.</p>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-card reveal">
+            <summary>Quando devo procurar cirurgia geral?</summary>
+            <p>Quando houver suspeita de hérnia, pedra na vesícula, dor abdominal recorrente, cistos, nódulos, feridas, abscessos ou dúvida sobre necessidade de procedimento.</p>
+          </details>
+          <details class="faq-card reveal">
+            <summary>Nutrologia é só para emagrecimento?</summary>
+            <p>Não. A avaliação pode envolver metabolismo, deficiências nutricionais, fadiga, saúde óssea, performance, composição corporal e prevenção clínica.</p>
+          </details>
+          <details class="faq-card reveal">
+            <summary>Preciso levar exames?</summary>
+            <p>Leve exames recentes, lista de medicamentos, cirurgias prévias, alergias e qualquer documento relacionado à queixa principal.</p>
+          </details>
+          <details class="faq-card reveal">
+            <summary>O site substitui atendimento de urgência?</summary>
+            <p>Não. Sinais intensos ou progressivos devem ser avaliados em pronto atendimento. O site facilita consulta eletiva e orientação inicial.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacidade">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Privacidade e LGPD</span>
+            <h2>Seus dados, tratados com cuidado.</h2>
+          </div>
+          <p>Transparência sobre como as informações enviadas pelo site são utilizadas, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-card reveal" style="padding:1.15rem 1.25rem">
+            <h3 style="margin-bottom:.5rem">Finalidade do uso</h3>
+            <p>Os dados informados (nome, e-mail, telefone e mensagem) são usados exclusivamente para responder ao seu contato e organizar o agendamento da consulta.</p>
+          </article>
+          <article class="faq-card reveal" style="padding:1.15rem 1.25rem">
+            <h3 style="margin-bottom:.5rem">Compartilhamento</h3>
+            <p>Não vendemos nem compartilhamos seus dados para fins de marketing. O envio do formulário é processado por serviço de e-mail apenas para entregar a sua mensagem.</p>
+          </article>
+          <article class="faq-card reveal" style="padding:1.15rem 1.25rem">
+            <h3 style="margin-bottom:.5rem">Seus direitos</h3>
+            <p>Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelo e-mail <a href="mailto:contato@catharinemarigo.com.br" style="color:var(--teal); text-decoration:underline">contato@catharinemarigo.com.br</a>.</p>
+          </article>
+          <article class="faq-card reveal" style="padding:1.15rem 1.25rem">
+            <h3 style="margin-bottom:.5rem">Telemedicina e sigilo</h3>
+            <p>Os atendimentos são realizados por telemedicina, conforme as normas do Conselho Federal de Medicina (CFM), preservando o sigilo médico e a confidencialidade das informações de saúde.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-title">Catharine Marigo</div>
+          <p>Cirurgia geral e Nutrologia, com atendimento por telemedicina. Avaliação clínica individualizada, linguagem acessível e cuidado com a segurança do paciente.</p>
+          <p style="margin-top:.7rem">CRM 237820 · SP &nbsp;•&nbsp; Cotia · SP &nbsp;•&nbsp; <a href="mailto:contato@catharinemarigo.com.br" style="color:#fff;text-decoration:underline">contato@catharinemarigo.com.br</a></p>
+          <p style="margin-top:.4rem; font-size:.85rem">Responsável técnica: Dra. Catharine Marigo — CRM 237820/SP.</p>
+        </div>
+        <div class="footer-links">
+          <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+          <a class="btn btn-outline" href="#privacidade">Privacidade (LGPD)</a>
+          <a class="btn btn-outline" href="#inicio">Voltar ao topo</a>
+        </div>
+      </div>
+      <p class="legal">© <span data-year></span> Catharine Marigo · CRM 237820/SP. Conteúdo informativo e educativo, sem substituir a consulta médica individualizada. Atendimentos realizados por telemedicina, conforme as normas do CFM.</p>
+    </div>
+  </footer>
+
+  <div class="floating-cta" aria-label="Atalho de agendamento">
+    <a class="btn btn-primary" href="#agendamento">Marque sua consulta</a>
+  </div>
+
+  <script>
+    const SITE_NAME = 'Catharine Marigo';
+
+    const $ = (selector, context = document) => context.querySelector(selector);
+    const $$ = (selector, context = document) => [...context.querySelectorAll(selector)];
+
+    function setupContactForm() {
+      const form = $('[data-contact-form]');
+      if (!form) return;
+      const status = $('[data-form-status]', form);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const original = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        if (status) { status.textContent = ''; status.style.color = ''; }
+        try {
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: new FormData(form)
+          });
+          const data = await response.json();
+          if (response.ok && data.success) {
+            form.reset();
+            if (status) {
+              status.style.color = 'var(--teal)';
+              status.textContent = 'Mensagem enviada com sucesso. Em breve responderemos por e-mail.';
+            }
+          } else if (status) {
+            status.style.color = 'var(--rose)';
+            status.textContent = 'Não foi possível enviar: ' + (data.message || 'tente novamente.');
+          }
+        } catch (error) {
+          if (status) {
+            status.style.color = 'var(--rose)';
+            status.textContent = 'Algo deu errado. Tente novamente ou escreva para contato@catharinemarigo.com.br.';
+          }
+        } finally {
+          submitBtn.textContent = original;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+
+    function setupTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.dataset.theme = saved;
+      $('[data-theme-toggle]')?.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        const apply = () => {
+          document.documentElement.dataset.theme = next;
+          localStorage.setItem('theme', next);
+        };
+        if (document.startViewTransition) document.startViewTransition(apply);
+        else apply();
+      });
+    }
+
+    function setupReveal() {
+      const items = $$('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach((item) => item.classList.add('is-visible'));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach((item) => io.observe(item));
+    }
+
+    function setupScrollProgress() {
+      const update = () => {
+        const max = document.documentElement.scrollHeight - innerHeight;
+        const progress = max > 0 ? (scrollY / max) * 100 : 0;
+        document.documentElement.style.setProperty('--scroll', `${progress}%`);
+      };
+      addEventListener('scroll', update, { passive: true });
+      addEventListener('resize', update);
+      update();
+    }
+
+    function setupProblemFilters() {
+      const buttons = $$('[data-filter]');
+      const cards = $$('.problem-card');
+      const search = $('[data-search]');
+      let current = 'all';
+
+      const normalize = (value) => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const apply = () => {
+        const query = normalize(search?.value || '');
+        cards.forEach((card) => {
+          const categoryOk = current === 'all' || card.dataset.category === current;
+          const haystack = normalize(`${card.textContent} ${card.dataset.keywords || ''}`);
+          const queryOk = !query || haystack.includes(query);
+          card.hidden = !(categoryOk && queryOk);
+        });
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          current = button.dataset.filter;
+          buttons.forEach((btn) => btn.setAttribute('aria-pressed', String(btn === button)));
+          apply();
+        });
+      });
+      search?.addEventListener('input', apply);
+    }
+
+    function setupYear() {
+      $('[data-year]').textContent = new Date().getFullYear();
+    }
+
+    setupContactForm();
+    setupTheme();
+    setupReveal();
+    setupScrollProgress();
+    setupProblemFilters();
+    setupYear();
+  </script>
+</body>
+</html>
